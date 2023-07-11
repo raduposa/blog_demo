@@ -1,16 +1,19 @@
-<div class="container">
-<p style="color: green"><%= notice %></p>
+  <div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<h2>Posts</h2>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
+  <h2 >Posts</h2>
+  <p class="text-underline">This text will be underlined.</p>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
       <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
+      </p>
+    <% end %>
+  </div>
+    
       <%= link_to "New post", new_post_path %>
-</div>
+
+  </div>

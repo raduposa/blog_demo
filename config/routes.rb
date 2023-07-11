@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :features
   resources :images
   
   get 'about', to: 'pages#about'
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "pages#home"
    resources :posts
-   resources :images
-
+   
 
 end
