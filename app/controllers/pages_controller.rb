@@ -7,4 +7,14 @@ class PagesController < ApplicationController
 
   def images
   end
+
+  def features
+    
+  end
+
+  def show
+    @feature = Feature.find(params[:id])
+    @text = @feature.text
+  end
+  
 end

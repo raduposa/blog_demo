@@ -1,10 +1,10 @@
 <div class="container">
     <div id="<%= dom_id post %>">
-  <div>
+
     <h5><%= post.title %></h5>
-  </div>
 
-  <div>
-  <h6><%= post.body %></h6> </div>
+    <h6><%= pluralize(post.views, "view") %></h6>
 
+  <h6><%= post.body %></h6> 
+</div>
 </div>

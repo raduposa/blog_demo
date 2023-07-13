@@ -1,6 +1,6 @@
 class FeaturesController < ApplicationController
   before_action :set_feature, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: %i[show index]
   # GET /features or /features.json
   def index
     @features = Feature.all
@@ -65,6 +65,6 @@ class FeaturesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def feature_params
-      params.require(:feature).permit(:text, :body)
+      params.require(:feature).permit(:title, :body)
     end
 end

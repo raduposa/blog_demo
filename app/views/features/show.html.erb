@@ -1,6 +1,8 @@
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @feature %>
+<input type="text" value="<%= @text %>" name="feature[text]" id="feature_text">
 
 <div>
   <%= link_to "Edit this feature", edit_feature_path(@feature) %> |
